@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="sitestyle.css" rel="stylesheet" />
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script src="calculator-script.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+                <div class="row results-row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 gst-quater-col">
+                        <div class="form-group">
+                            <h4 class="h4 text-center">GST Quater</h4>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input id="gstQuater" type="number" class="form-control" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 gst-annual-col">
+                        <div class="form-group">
+                            <h4 class="h4 text-center">Annual GST</h4>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input id="gstAnnual" type="number" class="form-control" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 tax-payyable-col">
+                        <div class="form-group">
+                            <h4 class="h4 text-center">Tax Payable</h4>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input id="taxPayable" type="number" class="form-control" readonly />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 medicare-levy-col">
+                        <div class="form-group">
+                            <h4 class="h4 text-center">Medicare Levy</h4>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input id="medicareLevy" type="number" class="form-control" readonly />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="calculatorForm">
+                    <div class="row month-year-row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="panel panel-success marginT10">
+                                <div class="panel-heading">
+                                    <div class="panel-title text-center">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <h4 class="h4">Uber Start Date</h4>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <select class="form-control" id="month">
+                                                    <option value="7">January</option>
+                                                    <option value="8">February</option>
+                                                    <option value="9">March</option>
+                                                    <option value="10">April</option>
+                                                    <option value="11">May</option>
+                                                    <option value="12">June</option>
+                                                    <option value="1" selected>July</option>
+                                                    <option value="2">August</option>
+                                                    <option value="3">September</option>
+                                                    <option value="4">October</option>
+                                                    <option value="5">November</option>
+                                                    <option value="6">December</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                <h4 class="h4">2018 - 2019</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row calculator-row">
+                        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                            <div class="row">
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="panel panel-success marginT10">
+                                        <div class="panel-heading">
+                                            <div class="panel-title text-center">
+                                                Business % (0 - 100)
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input class="form-control" id="businessPercentage" type="number"
+                                                    min="0" max="100" required>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default no-border">
+                                        <div class="panel-heading quater">
+                                            <div class="panel-title text-center">
+                                                Quater
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <select class="form-control" readonly id="quater">
+                                                <option>Jul 2018 to Sep 2018</option>
+                                                <option>Oct 2018 to Dec 2018</option>
+                                                <option>Jan 2019 to Mar 2019</option>
+                                                <option>Apr 2019 to Jun 2019</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default no-border">
+                                        <div class="panel-heading driver-income">
+                                            <div class="panel-title text-center">
+                                                Driver's Income (3 months)
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input id="driverIncome" type="number" min="0" class="form-control"
+                                                    required />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default no-border">
+                                        <div class="panel-heading income">
+                                            <div class="panel-title text-center">
+                                                Qtr Income
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">$</span>
+                                                <input id="netIncome" type="number" class="form-control" readonly />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-md-8 col-lg-8">
+
+                                    <div class="panel panel-default no-border marginT10">
+                                        <div class="panel-heading text-center expenses">
+                                            <div class="panel-title">
+                                                Quarterly Expenses (3 months)
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"> <img src="fuel.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="repair.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        </h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Parking.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="insurance.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Phone.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Internet.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Parking.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Tolls.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Cleaning.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center"><img src="Other.png"
+                                                                class="img-responsive margin-auto" /></h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="form-group">
+                                                        <h5 class="h5 text-center">
+                                                            <img src="uber-fee.jpeg"
+                                                                style="width: 70px;height: 70px;border-radius: 10px;"
+                                                                class="img-responsive margin-auto" />
+                                                        </h5>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="number" class="form-control expense-item"
+                                                                min="0" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default no-border marginT10">
+                                        <div class="panel-heading purchases">
+                                            <div class="panel-title text-center">
+                                                Purchases
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <h5 class="h5 text-center">Car</h5>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">$</span>
+                                                        <input type="number" class="form-control purchase-item"
+                                                            min="0" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            <div class="panel panel-default no-border marginT10">
+                                <div class="panel-heading earnings">
+                                    <div class="panel-title text-center">
+                                        Earnings
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input id="earnings" type="number" class="form-control" readonly />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default no-border marginT10">
+                                <div class="panel-heading deduction">
+                                    <div class="panel-title text-center">
+                                        Taxable Income
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input id="taxableIncome" type="number" class="form-control" readonly />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row message-row">
+                        <div
+                            class="col-xs-12 col-sm-offset-2 col-sm-10 col-md-offset-2 col-md-10 col-lg-offset-2 col-lg-10">
+                            <h4 id="message1" class="h4"></h4>
+                            <h4 id="message2" class="h4"></h4>
+                        </div>
+                    </div>
+                    <div class="row bottom-row">
+                        <div
+                            class="col-xs-12 col-sm-offset-4 col-sm-4 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
+                            <input id="calculateBtn" type="submit" class="btn btn-success btn-block calculate-button"
+                                value="Calculate" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

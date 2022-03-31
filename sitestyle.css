@@ -1,0 +1,169 @@
+body{
+    margin-bottom:20px;
+    background-color:#ffffff;
+}
+
+.results-row{
+    height:25%;
+    min-height:25%;
+    max-height:25%;
+}
+
+.gst-quater-col{
+    background-color:#ff4444;
+	color:white;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.gst-annual-col{
+    background-color:#ffbb33;
+    color:white;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 1px solid #blue;
+}
+
+.tax-payyable-col{
+    background-color:#99cc00;
+    color:white;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.medicare-levy-col{
+    background-color:#33b5e5;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+    color:white;
+}
+
+.margin-auto{
+    margin:auto;
+}
+
+.month-year-row, .bottom-row{
+    background-color:#fff;
+}
+.message-row{
+    background-color:#fff;
+}
+.calculator-row{
+    height:15%;
+    min-height:15%;
+    max-height:15%;
+    background-color:#fff;
+}
+
+.border-bottom{
+    border-bottom: 0.1px dashed black;
+    margin-bottom: 1px;
+}
+
+
+.quater,.expenses, .purchases{
+    background-color:dodgerblue!important;
+    color:black !important;
+      border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+.earnings, .deduction{
+	background-color:dodgerblue!important;
+	color:black !important;
+      border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+	
+.driver-income{
+    background-color:dodgerblue!important;
+    color:black !important;
+      border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.income{
+    background-color:dodgerblue!important;
+    color:black !important;
+      border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.margin0{
+    margin:0 !important;
+}
+
+.marginT5{
+    margin-top:5px;
+}
+
+.marginT10{
+    margin-top:10px;
+}
+
+.marginR5{
+    margin-right:5px;
+}
+
+.marginL5{
+    margin-left:5px;
+}
+
+.marginB5{
+    margin-bottom:5px;
+}
+
+.padding0{
+    padding:0;
+}
+
+.height-100-percent{
+    height:100%;
+}
+
+.marginLT2{
+    margin-left:2px;
+    margin-right:2px;
+}
+
+.no-border{
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.td{
+    color:black !important;
+}
+
+.calculate-button{
+    height:47px;
+    font-size:18px;
+}
+
+.input-group-addon
+{
+    background-color:#ffffff;
+border-radius: 8px 0px 0px 8px;
+-moz-border-radius: 8px 0px 0px 8px;
+-webkit-border-radius: 8px 0px 0px 8px;
+border: 1px solid #blue;
+
+text-align:center;
+}
+
+.form-control{
+	h1-align:center;
+    border-radius: 0px 8px 8px 0px;
+    -moz-border-radius: 0px 8px 8px 0px;
+    -webkit-border-radius: 0px 8px 8px 0px;
+    border: 1px solid #blue;
+    text-align:center;
+}
